@@ -3,6 +3,7 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
+    font-family: 'PT Serif', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgb(75, 75, 75);
@@ -16,7 +17,7 @@ header{
   margin-top: 5px;
 }
 .container{
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .logo{
@@ -44,42 +45,31 @@ text-align: center;
   display: flex;
   align-items: center;
 }
+.logo__social{
+  display: flex;
+  align-items: center;
+}
 .logo__phone a{
-  font-size: 18px;
-  padding-left: 5px;
+  font-size: 20px;
   text-decoration: none;
   color: rgb(75, 75, 75);
   font-weight: 500;
 }
-.logo__email{
-  display: flex;
-}
+
 .logo__email a{
   padding-left: 5px;
   text-decoration: none;
   color: rgb(75, 75, 75);
 }
-.logo__info{
-  display: flex;
-  align-self: flex-start;
-  padding-top: 15px;
-  flex: 0 0 400px;
+.contacts__loc{
+  font-size: 18px;
+  line-height: 32px;
+  flex: 0 0 40%;
+  margin: 0 20px;
 }
-.logo__adress{
-  display: flex;
-  text-decoration: none;
-  color: rgb(75, 75, 75);
-}
-.address{
-  padding-left: 5px;
-}
-.logo__line{
-  border-left: 1px solid;
-  margin: 0 10px;
-}
-.social-icons__link{text-decoration: none;}
-address{
-  display: flex;
+
+.pin img{
+  filter: none;
 }
 h1{ 
   font-size: calc(20px + 4 * ((100vw - 320px) / (1300 - 320)));
@@ -88,11 +78,15 @@ h1{
   padding: 0 15px;
   background-color: #ffc409;
 }
-h2{
+.logo__text h2{
   font-size: calc(17px + 3 * ((100vw - 320px) / (1300 - 320)));
   text-decoration: none;
   font-weight: 500;
   margin-top: -10px;
+}
+
+h2{
+  text-align: center;
 }
 .nav__main{
   background-color: #ffc409;
@@ -111,6 +105,7 @@ img{
 .nav__ul{
   display: flex;
   justify-content: space-around;
+  padding-inline-start: 0;
 }
 .nav-items{
   list-style-type:none;
@@ -120,14 +115,18 @@ img{
   padding-bottom: 8px;
   font-family: 'PT Serif',serif;
 }
-ul li:hover {
+.nav-items:hover {
   border-bottom: 3px solid #fff;
   cursor: pointer;
+}
+#visited{
+  border-bottom: 3px solid #fff;
 }
 .image { 
   position: relative;
   text-align: center;
   color: white;
+  margin-bottom: 50px;
 }
 .image img{
   object-fit: cover;
@@ -156,35 +155,482 @@ ul li:hover {
     font-style: italic;
     text-transform: none;
 }
-.social-icons__link img{
+/* .social-icons__link img{
   filter: grayscale(100%);
-}
+} */
 .social-icons__link img:hover{
   filter: grayscale(0%);
 }
+.nav__burger{
+  display: none;
+  margin: 12px 16px;
+  font-weight: 300;
+  font-size: 24px;
+  align-items: center;
+}
+.flex__grow{
+  flex-grow:1
+}
+.practice{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
+  margin-top: 50px;
+  align-items: center;
+}
+.practice__text{
+  font-size: 20px;
+  font-weight: 700;
+  font-weight: 500;
+    background-color: #ffc409;
+    padding: 1px 12px;
+}
+.practice__line{
+  margin: 15px;
+  border-bottom: 2px solid;
+  width: 77px;
+  color: #ffc409;
+}
+.directions{
+  display: flex;
+  justify-content: space-around;
+}
+.directions__items{
+  display: flex;
+  flex: 0 1 33.333%;
+  margin: 15px;
+  border: 1px solid #ffc409;
+  align-items: center;
+}
+.directions__items img{
+  padding: 10px;
+}
+.directions__item{
+  padding: 10px;
+}
+p {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.flex__column{
+  justify-content: space-around;
+  display: flex;
+  margin: 50px 50px 0px 50px;
+  align-items: center;
+}
+
+.text__h2{
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+  margin: 0px 0px 15px 0px;
+}
+.text__main{
+font-size: calc(27px + 3 * ((100vw - 320px) / (1300 - 320)));
+background-color: #f9dbb396;
+}
+.flex__p{
+  margin: 30px 20px;
+}
+.text{
+  flex: 0 1 50%;
+  margin: 0 20px;
+
+}
+.speak__language{
+  background-color: #ffc409;
+  background: url('./img/footer_color1.webp') repeat left top scroll;
+  margin: 35px 0 0 0;
+}
+.speak__flex{
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0
+}
+.speak__right{
+  display: flex;
+}
+.font__white{
+  color: #fff;
+}
+.speak__font{
+  font-size: 28px;
+  padding: 15px 15px 15px 15px;
+}
+.language__font{
+  font-size: 22px;
+  margin: 0 15px;
+  padding-bottom: 4px;
+    border-bottom: 4px solid #fff;
+}
+.language__font:hover {
+  border-bottom: 3px solid rgb(75, 75, 75);
+  cursor: pointer;
+}
+.lawyer{
+  margin: 20px 0;
+}
+.text-bkcolor{
+  background-color: #ffc409;
+  padding: 10px;
+}
+.text__center{
+  text-align: center;
+}
+.testimonials{
+  margin: 0 40px;
+  border: 1px solid;
+  padding: 0 10px;
+}
+.testimonials__italic{
+  font-style: italic;
+}
+.stars{
+  color: #e7711b;
+  font-size: 20px;
+}
+.stars__name{
+  font-size: 22px;
+  font-weight: bold;
+}
+.testimonial{
+  margin: 40px 0;
+}
+
+a {
+  text-decoration: none;
+}
+a:active {
+  color: none;
+}
+a:link {
+  color:  rgb(75, 75, 75);
+ 
+}
+.attorney{
+  margin: 40px 0 0 0;
+}
+.attorney__data{
+display: flex;
+flex-direction: column;
+max-width: 525px;
+float: left;
+margin: 0px 25px 0px 20px;
+line-height: 32px;
+font-size: 17px;
+}
+.attorney__area{
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,.2);
+  margin-top: -10px;
+}
+.attorney__practice{
+  margin: 0px;
+}
+.attorney__m{
+  margin: 25px;
+}
+.attorney__biography{
+  margin: 0px 20px 20px 20px;
+}
+.text__biography p:first-child{
+  margin-top: -10px;
+}
+.text__biography p{
+  font-size: 17px;
+}
+
+.attorney__h{
+  font-weight: 700;
+  text-decoration: underline;
+}
+.attorney__info{
+  background-color: #ffc409;
+  border-radius: 2px;
+  margin: 10px 0;
+  padding: 1px 11px;
+  font-size: 15px;
+  text-align: center;
+}
+.logo__attorney{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  font-weight: 500;
+}
+.logo__attorney a{
+  font-size: 15px;
+  color: rgb(75, 75, 75);
+}
+.practice__areas{
+  margin: 10px;
+}
+.practice__img{
+  display: flex;
+  justify-content: space-around;
+}
+.our__results{
+  display: flex;
+    line-height: 32px;
+    font-size: 17px;
+    margin: 0px 10px 0 10px;
+}
+.result{
+  display: flex;
+  flex: 0 0 270px;
+  align-items: center;
+  text-align: center;
+  font-size: 22px;
+}
+.our__results-rows{
+  margin: 40px 10px 10px 10px;
+}
+.results__m{
+  margin: 25px;
+}
+.footer{
+display: flex;
+justify-content: space-between;
+padding: 30px 0 30px 0;
+margin: 0 20px;
+}
+.footer__column{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__column1{
+  margin: 0 10px;
+}
+.footer__column2{
+  flex: 0 0 150px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer__column3{  
+  flex: 0 0 150px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer__column4{  
+  flex: 0 0 215px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer__line{
+  line-height: 27px;
+}
+
+.wrapper {
+ /*  background-color: #f9dbb396; */
+  background-color: rgba(0, 0, 0, 0.80);
+  color: #fff;
+}
+.wrapper a{
+  color: #fff;
+  font-size: 16px;
+}
+.wrapper h1{
+  color:rgb(75, 75, 75)
+}
+.contacts{
+  margin: 100px 0;
+}
+.connect__us{
+  display: flex;
+  font-weight: 700;
+  flex-direction: column;
+ 
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .footer{
+flex-direction: column;
+  }
+  .contacts{
+    margin: 20px 0;
+     }
+
+  .attorney{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .attorney__data{
+    margin: 0px 10px 20px 10px;
+  }
+  .text__biography p {
+    font-size: 19px;
+}
+  .directions{
+    flex-direction: column;
+  }
+  .lawyer__profile{
+    margin: 0px 0px 20px 0px;
+  }
+}
 
 @media only screen and (max-width: 900px) {
-  .logo__line{display: none;}
-  .logo__adress{display: none;}
-  .logo__info{flex: none;}
-}
-
-@media only screen and (max-width: 680px) {
-  .logo__line{display: none;}
-  .logo__adress{display: none;}
-  .logo__info{flex: none;}
-}
-
-@media only screen and (max-width: 425px) {
-  .logo__info{
-    display: inline;
-    flex: auto;
-  }
   .image img{
     height: calc(180px + 401 * ((100vw - 320px) / (1300 - 320)));
   }
+  .lawyer__column{
+    flex-direction: column;
+    margin: 30px 10px 0px 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer__column2, .footer__column3, .footer__column4{
+    flex: none;
+  }
+  .contacts{
+    margin: 0;
+     }
+  .practice__img{
+flex-direction: column;
+align-items: center;
+  }
+.our__results{
+  flex-direction: column;
+  margin: 0;
+}
+.result{
+  flex: none;
+}
+.results__m{
+    margin: 10px 10px 10px 0px;
+  }
+.practice{
+margin-top: 20px;
+}
+  .image{
+    margin-bottom: 20px;
+  }
+  .flex__column{
+    flex-direction: column;
+    margin: 30px 10px 0px 10px;
+  }
+  .text__main{
+    margin: 0 20px;
+  }
+  .text__h2{
+    margin: 20px 0;
+  }
+  .attorney__practice .text__h2{
+    margin: 0;
+  }
+  .text{
+    margin: 10px;
+  }
   .nav__ul{
+    display: none;
+  }
+  .nav__burger{
+  display: flex;
+  }
+  .responsive {
+    flex-direction: column;
+    margin: 0 15px ;
+    display: flex;
+  }
+  .nav-items{padding: 12px 0px;}
+  .responsive .nav-items:nth-child(2){border-top:3px solid rgb(75, 75, 75);padding-top: 8px;}
+.nav-items:last-child {border-bottom:none}
+  .hide__class{display: none}
+}
+
+@media only screen and (max-width: 640px) {
+  .speak__language {
+    margin: 25px 0 0 0;
+  }
+  .logo__contacts{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    border-bottom: 1px solid;
+    margin-bottom: 5px;
+    order:0;
+  }
+  .logo__img{
+    order:1;
+    flex-grow: 1;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .logo__attorney{
+    flex-direction: column;
+  }
+  .logo__attorney a {
+    font-size: 17px;
+  }
+  
+}
+
+@media only screen and (max-width: 425px) {
+  .attorney__m {
+    margin: 25px;
+    font-size: 19px;
+   
+  }
+  .results__m{
+    font-size: 19px;
+  }
+  /* .nav__ul{
     flex-direction: column;
     display: inline-flex;
+  } */
+}
+
+.tr{
+  opacity: 0;
+  animation: loading 0.7s;
+animation-fill-mode: forwards;
+}
+
+.tr:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.tr:nth-child(2) {
+    animation-delay: 0.02s;
+}
+.tr:nth-child(3) {
+    animation-delay: 0.12s;
+}
+.tr:nth-child(4) {
+    animation-delay: 0.22s;
+}
+.tr:nth-child(5) {
+    animation-delay: 0.32s;
+}
+.tr:nth-child(6) {
+    animation-delay: 0.42s;
+}
+.tr:nth-child(7) {
+    animation-delay: 0.52s;
+}
+
+@keyframes loading {
+   0% {
+    transform: rotateY(90deg);
+    }
+  
+  100% {
+    opacity: 1;
   }
 }
