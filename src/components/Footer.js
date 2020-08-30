@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import {scrollTo} from './Lawyer'
+import { withNamespaces } from 'react-i18next';
 
-function Footer() {
+function Footer({ t }) {
    return (
       <footer>
          <div className='wrapper'>
@@ -15,20 +16,20 @@ function Footer() {
                   </div>
                   <div className='logo__text'>
                      <h1>Voloshen Low Firm P.C.</h1>
-                     <h2>Integrity, Quality, Justice</h2>
+                     <h2>{t('Integrity, Quality, Justice')}</h2>
                   </div>
                </div> 
-                     <div className='footer__line'>We treat our clients with respect and give each and every one of our clients full attention, along with personal service, reasonable fees and quick access to an experienced and knowledgeable attorney.</div>
+                     <div className='footer__line'>{t('footer text')}</div>
                   </div>
 
                   <div className='footer__column2'>
-                     <div className='text__h2'>Law Firm</div>
-                     <Link className='' to='/attorney' onClick={scrollTo}>About</Link>
-                     <Link className='' to='/practice-area' onClick={scrollTo}>Legal Services</Link>
+                     <div className='text__h2'>{t('Law Firm')}</div>
+                     <Link className='' to='/attorney' onClick={scrollTo}>{t('About')}</Link>
+                     <Link className='' to='/practice-area' onClick={scrollTo}>{t('Legal Services')}</Link>
                   </div>
 
                   <div className='footer__column3'>
-                     <div className='text__h2'>Resources</div>                               
+                     <div className='text__h2'>{t('Resources')}</div>                               
                         <a className="social-icons__link" href="https://www.facebook.com/voloshenlawfirm" target="_blank" rel="noopener noreferrer">
                         Facebook
                         </a>
@@ -41,7 +42,7 @@ function Footer() {
                   </div>
 
                   <div className='footer__column4'>
-                     <div className='text__h2'>Contact Details</div>
+                     <div className='text__h2'>{t('Contact')}</div>
                      <div className="logo__phone">
                         <a href="tel:215-437-7854"> &#9742; (215) 437-7854</a>
                      </div>
@@ -60,4 +61,4 @@ function Footer() {
    )
 }
 
-export default Footer;
+export default withNamespaces()(Footer);

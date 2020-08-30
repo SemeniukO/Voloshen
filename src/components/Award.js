@@ -2,9 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { withNamespaces } from 'react-i18next';
 
 class SimpleSlider extends React.Component {
   render() {
+    const { t } = this.props;
+
     var settings = {
       dots: true,
       infinite: true,
@@ -42,25 +45,25 @@ class SimpleSlider extends React.Component {
     return (
       <div className='container'>
         <div className='testimonial'>
-      <div className='text__main text__h2 '>Awards</div>
+      <div className='text__main text__h2 '>{t('Awards')}</div>
       <Slider {...settings}>
         <div>
-        <img src='../img/award/logo.jpg' alt=''/>
+        <img src='../img/award/logo.webp' alt=''/>
         </div>
         <div>
-        <img src='../img/award/logo1.png' alt=''/>
+        <img src='../img/award/logo1.webp' alt=''/>
         </div>
         <div>
-        <img src='../img/award/logo3.png' alt=''/>
+        <img src='../img/award/logo3.webp' alt=''/>
         </div>
         <div>
-        <img src='../img/award/avvo-4.png' alt=''/>
+        <img src='../img/award/avvo-4.webp' alt=''/>
         </div>
         <div>
-        <img src='../img/award/imgres.png' alt=''/>
+        <img src='../img/award/imgres.webp' alt=''/>
         </div>
         <div>
-        <img src='../img/award/logo_10_best.png' alt=''/>
+        <img src='../img/award/logo_10_best.webp' alt=''/>
         </div>
       </Slider>
       </div>
@@ -69,4 +72,4 @@ class SimpleSlider extends React.Component {
   }
 }
 
-export default SimpleSlider;
+export default withNamespaces()(SimpleSlider);

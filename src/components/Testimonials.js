@@ -2,9 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { withNamespaces } from 'react-i18next';
 
 class Testimonials extends React.Component {
    render() {
+      const { t } = this.props;
+
       var settings = {
          dots: true,
          infinite: true,
@@ -12,7 +15,7 @@ class Testimonials extends React.Component {
          slidesToShow: 2,
          slidesToScroll: 2,
          initialSlide: 0,
-         adaptiveHeight: true,
+         adaptiveHeight: false,
          responsive: [
             {
                breakpoint: 1024,
@@ -43,7 +46,7 @@ class Testimonials extends React.Component {
       return (
          <div className='container'>
             <div className='testimonial'>
-               <div className='text__main text__h2 testimonial'>Testimonials</div>
+               <div className='text__main text__h2 testimonial'>{t('Testimonials')}</div>
                <Slider {...settings}>
                   <div>
                      <div className='testimonials'>
@@ -102,4 +105,4 @@ I would highly recommend him to everyone to represent and handle your case.</p>
 }
 
 
-export default Testimonials;
+export default withNamespaces()(Testimonials);

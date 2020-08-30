@@ -1,32 +1,33 @@
 import React from "react";
+import { withNamespaces } from 'react-i18next';
 
-function Directions() {
+function Directions({ t }) {
    return (
       <div className='container'>
          <div className='practice'>
-            <div className='practice__text'>PRACTICE AREAS</div>
+            <div className='practice__text'>{t('Practice Areas2')}</div>
             <div className='practice__line'></div>
          </div>
          <div className='directions'>
             <div className="directions__items">
                <img src='../img/id.svg' alt='menu' width='34' ></img>
                <div className='directions__item'>
-                  <h3>Permanent Residency - Greencard</h3>
-                  <p>Permanent residency refers to a person’s visa status. The person is allowed to reside indefinitely within a country of which he or she is not a citizen.</p>
+                  <h3>{t('Permanent Residency - Greencard')}</h3>
+                  <p>{t('Greencard text')}</p>
                </div>
             </div>
             <div className="directions__items">
                <img src='../img/courthouse.svg' alt='menu' width='34' ></img>
                <div className='directions__item'>
-                  <h3>Naturalization</h3>
-                  <p>Naturalization is the process by which U.S. citizenship is granted to a foreign citizen or national after he or she fulfills the requirements established by Congress in the Immigration and Nationality Act (INA).</p>
+                  <h3>{t('Naturalization')}</h3>
+                  <p>{t('Naturalization text')}</p>
                </div>
             </div>
             <div className="directions__items">
                <img src='../img/law.svg' alt='menu' width='34' ></img>
                <div className='directions__item'>
-                  <h3>Removal and Deportation Defense</h3>
-                  <p>Defense involves representing and advocating for immigrants who have already been admitted to the United States or are seeking admission to the United States at a Port of Entry.</p>
+                  <h3>{t('Removal and Deportation Defense')}</h3>
+                  <p>{t('Deportation Defense text')}</p>
                </div>
             </div>
          </div>
@@ -34,4 +35,4 @@ function Directions() {
    )
 }
 
-export default Directions;
+export default withNamespaces()(Directions);
