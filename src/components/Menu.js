@@ -22,7 +22,7 @@ function Menu({ t }) {
                   <Link className='nav-items hide__class' to='/' onClick={myFunction}>{t('Home')}</Link>
                   <Link className='nav-items tr' to='/attorney' onClick={myFunction}>{t('Attorney')}</Link>
                   <Link className='nav-items tr' to='/practice-area' onClick={myFunction}>{t('Practice Areas')}</Link>
-                  <li className='nav-items tr' onClick={myFunction}>{t('Consultations')}</li>
+                  <Link className='nav-items tr' to='/consultations' onClick={myFunction}>{t('Consultations')}</Link>
                   <Link className='nav-items tr' to='/our-results' onClick={myFunction}>{t('Our Results')}</Link>
                   <Link className='nav-items tr' to='/contacts' onClick={myFunction}>{t('Contact')}</Link>
                </ul>
